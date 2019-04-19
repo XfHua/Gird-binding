@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App286"
+             x:Class="App286.MainPage">
+
+    <ContentPage.Content>
+
+        <Grid x:Name="gridDisplay" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!-- Use Grid.Column to specify column -->
+
+            <Label Grid.Row="0" Grid.Column="0" Text="{Binding FullName}" BackgroundColor="Red"/>
+            <Label x:Name="HomeLabel"  Text="Home Page is here" TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Small"></Label>
+
+            <Button Clicked="Button_Clicked" Text="click me" Grid.Row="1" Grid.Column="1" />
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
